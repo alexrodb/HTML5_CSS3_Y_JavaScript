@@ -1,0 +1,9 @@
+/* Estilos para personalizar enlaces */
+a{
+    color: #333333;
+    text-decoration: none;
+    border: none;
+}
+a:hover{
+    color: #cccccc;
+}
