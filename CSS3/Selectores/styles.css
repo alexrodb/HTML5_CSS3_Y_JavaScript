@@ -1,0 +1,33 @@
+/* Estilos principales de la página */
+
+/* Selector tipo elemento */
+body{
+    font-family: 'Arial', sans-serif;
+}
+
+/* Selector tipo clase */
+.subheading {
+    color: blue;
+}
+
+/* Selector tipo id */
+#textred{
+    color:crimson;
+    font-size: 85%;
+}
+
+/* Selector específico */
+p#colorYellow{
+    background-color: yellow;
+    color: white;
+    }
+p#colorBlue{
+    background-color: darkblue;
+    color: white;
+    }
+p#colorRed{
+    background-color: red;
+    color: white;
+    }
+
+    
