@@ -1,8 +1,12 @@
-/* Estilos principales de la página */
+/* Estos son ejemplos de selectores basicos en CSS */
 
 /* Selector tipo elemento */
 body{
     font-family: 'Arial', sans-serif;
+}
+span { 
+    background-color: black; 
+    color: white;
 }
 
 /* Selector tipo clase */
@@ -30,4 +34,20 @@ p#colorRed{
     color: white;
     }
 
-    
+/* Selector descendiente */
+div span {
+    background-color: DodgerBlue;
+}
+
+/* Selectores agrupados */
+h1, h3, h5 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;
+font-style: italic;
+}
+
+article h3, article h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: oblique;
+}

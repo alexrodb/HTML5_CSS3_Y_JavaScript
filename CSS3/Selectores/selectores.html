@@ -2,20 +2,41 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Selectores</title>
-    
-    <link href="styles.css" rel="stylesheet" />
+    <title>Selectores en CSS</title>
+    <!-- Estilos Externos -->
+    <link href="estilos.css" rel="stylesheet" />
     <script src="main.js" type="text/javascript"></script>
+
+
+    <!-- Estilos Estilos embebidos, sobreescriben a los estilos externos si entran en conflicto-->
+    <style>
+        p { font-size: 20px }
+    </style>
     
 </head>
 <body>
 
-    <header>    
+    <header>   
     </header>
     
     <aside>
-
+    <nav>
+        <!-- Estilos Estilos Inline, sobreescriben a los estilos embebidos y externos si entran en conflicto-->
+        <ul style = "color: green;">
+            <li> <a href="#" style = "color: green;">Inicio</a> </li>
+            <li> <a href="#" style = "color: green;">Uno</a> </li>
+            <li> <a href="#" style = "color: green;">Dos</a> </li>
+            <li> <a href="#" style = "color: green;">Tres</a> </li>
+        </ul>
+        <p style="color: white; font-style: italic; background-color: black; padding: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aut soluta dolorum reprehenderit, sit voluptatem ex officiis deleniti nulla molestiae nemo esse, quam pariatur rerum natus velit quo, harum iure!.</p>
+    </nav> 
     </aside>
+    <div>
+        <span>Span 1.
+        <span>Span 2.</span>
+        </span>
+    </div>
+    <span>Span 3.</span>
     
     <section>
         <article>
@@ -23,7 +44,7 @@
             <p id="colorRed"> Rojo</p>
             <p id="colorBlue"> Azul</p>
         </article>
-
+        <h1>Título Lorem ipsum dolor sit</h1>
         <article>
             <h2 class="subheading">Título con Selector tipo clase</h2>
             <p>Hola Mundo 1</p>
@@ -45,6 +66,16 @@
         <article id="textred">
             <p><strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Mollitia ducimus et atque rerum perspiciatis. Quos magnam mollitia atque cupiditate harum repellat eos blanditiis voluptate eaque cum eius quas, quod nulla!</p>
         </article>
+
+        <h3>Título Lorem ipsum dolor sit</h3>
+        <h5>Título Lorem ipsum dolor sit</h5>
+
+        <article>
+            <h4>Título h4 Lorem ipsum dolor sit</h4>
+            <h3>Título h3 Lorem ipsum dolor sit</h3>
+            <h5>Título h5 Lorem ipsum dolor sit</h5>
+        </article>
+
     </section>
     
     <footer>
