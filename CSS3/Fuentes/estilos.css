@@ -1,0 +1,32 @@
+/* Estos son ejemplos para usar fuentes instaladas en un equipo  */
+body{
+    font-size: 200%;
+    }
+
+
+h1  {
+    font-family: 'Bangers', cursive;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+    }    
+
+h2{
+    font-size: 1.4em;
+}  
+
+#textSerif{
+    font-family: 'Times New Roman', Georgia, Times, serif;
+    }
+
+#textSans-Serif{
+    font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+#textMonospace{
+    font-family: 'Courier New', Courier, Monaco, monospace;
+    }
+    
+#textCursiva{
+    font-family: 'Comic Sans MS' , cursive;
+    }
