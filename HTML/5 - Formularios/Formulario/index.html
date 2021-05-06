@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Capítulo 6</title>
+    
+    <link href="estilos.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="main.js">
+    </script>
+</head>
+<body>
+    
+    <div id="main_wrapper">
+        <header>
+            <h1>Capítulo 6: Formularios</h1>
+            <nav>
+            </nav>
+        </header>
+        
+        <div id="main_container">
+            
+
+            <div id="content">
+                <section>
+                    <form action="http:/www.minominio.com/miservicio.php" method="post">
+                        <fieldset>
+                            <legend>Datos de usuario</legend>
+                            <label for="nombre">Nombre:</label>
+                            <input name="nombre" id="nombre" placeholder="escribe tu nombre" type="text" required />
+                            <br>
+                            <label for="apellidos">Apellidos</label>
+                            <input name="apellidos" id="apellidos" placeholder="pon tus apellidos" type="text"/>
+                            <br>
+                            <label for="clave">Contraseña</label>
+                            <input name="clave" id="clave" type="password"/>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Datos de información</legend>
+                            <label for="ciudad">Ciudad</label>
+                            <select name="ciudad" id="ciudad">
+                                <optgroup label="Europa">
+                                    <option value="ams">Amsterdam</option>
+                                <option value="par">París</option>
+                                </optgroup>
+                                
+                                <optgroup label="América">
+                                <option value="car">Caracas</option></optgroup>
+                                
+                            </select>
+                            
+                            <br>
+                            <label for="red">Rojo</label>
+                            <input id="red" value="red" type="checkbox"/>
+                             <label for="blue">Azul</label>
+                            <input id="blue" value="blue" type="checkbox"/>
+                            <br>
+                            <label for="red2">Rojo</label>
+                            <input name="grupo1" id="red2" value="red" type="radio"/>
+                             <label for="blue2">Azul</label>
+                            <input name="grupo1" id="blue2" value="blue" type="radio"/>
+                            
+                            <br>
+                            <label>Comentarios</label>
+                            <textarea></textarea>
+                            
+                            <br>
+                            <label for="numero">Contraseña</label>
+                            <input name="numero" id="numero" type="number"/>
+                            
+                            <br>
+                            <label for="navs">Navegador</label>
+                        <input id="navs" list="navegadores" />
+                        <datalist id="navegadores">
+                            <option value="Firefox">Firefox</option>
+                            <option value="Chrome">Chrome</option>
+                            <option value="Explorer">Explorer</option>
+                        </datalist>
+                        </fieldset>
+                        <input type="submit" value="Enviar datos"/>
+                        <input type="reset" value="Vaciar formulario"/>
+                        
+                        
+                        
+                        
+                    </form>
+                </section>
+            </div>
+            
+        </div>
+        
+
+        <footer>contacto</footer>
+    </div>
+    
+</body>
+</html>
