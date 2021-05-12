@@ -1,0 +1,375 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+body{
+   margin: 0;
+   padding: 0;
+   font-weight: 200;
+   font-size: 1em;
+   font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+h1{
+  font-size: 1.75em;
+}
+h2{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 1.25em;
+}
+a{
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+
+.big{
+  font-size: 1.4em;
+}
+
+.checklist{
+  overflow: hidden;
+}
+.resaltado{
+  background-color: aquamarine;
+  position: relative;
+}
+.resaltado .bloque-info{
+  position: absolute;
+  background: #666;
+  color: #fff;
+  padding: 0.2em 0.5em;
+  box-sizing: border-box;
+
+  width: 160px;
+  height: 1.5em;
+  bottom: -1.5em;
+
+  transform: translate(600px, 0);
+}
+.resaltado:hover .bloque-info{
+  left: 0;
+  height: 150px;
+  bottom: -150px;
+  transform: translate(0px, 0);
+  transition: transform ease-out 1s,
+          height 1.2s ease-in-out 0.5s,
+          bottom 1.2s ease-in-out 0.5s;
+}
+
+.small{
+  font-size: 0.9em;
+}
+
+.disable{
+  opacity: 0.5;
+  pointer-events: none;
+}
+.degraqdado-base{
+  background: -webkit-gradient(linear, left top, left bottom, from(#0a5c71), to(#063642));
+  background: -webkit-linear-gradient(top, #0a5c71 0%, #063642 100%);
+  background: -o-linear-gradient(top, #0a5c71 0%, #063642 100%);
+  background: linear-gradient(to bottom, #0a5c71 0%, #063642 100%);
+
+  background-color: #0a5c71;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.form-group{
+  margin: 15px 0;
+}
+.form-group label{
+  width: 100px;
+  display: inline-block;
+}
+.check-label{
+  width: auto !important;
+}
+.button{
+  border: 1px solid #063642;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: normal;
+  color: #ffffff;
+  padding: 0.2em 0.5em;
+  font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  margin: 10px 10px;
+  user-select: none;
+  cursor: pointer;
+
+
+  transition: background 1s;
+}
+.button:hover{
+  background-position: 0 100px;
+  transition: background 1s;
+}
+
+
+/*
+check
+ */
+.check-container{
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 35px;
+}
+.check-container input{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.check-layout{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ccc;
+  width: 25px;
+  height: 25px;
+}
+.check-container input:checked ~ .check-layout{
+  background-color: #2196F3;
+}
+.check-container input:checked ~ .check-layout:after{
+  content: "\f00c";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  color: #FFFFFF;
+
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.content[data-special="true"] h1:after{
+  content: "\f005";
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  margin-left: 0.2em;
+}
+
+#main-wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+header {
+  position: relative;
+  height: 40px;
+}
+header nav {
+  position: absolute;
+  bottom: 2px;
+}
+header nav ul > li {
+  display: inline-block;
+  margin: 0 15px;
+  vertical-align: baseline;
+}
+header nav li a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #FFFFFF;
+
+}
+header nav li a:hover {
+  color:aquamarine;
+  transition: color 1s;
+}
+
+
+.icon{
+  background-image: url("../assets/icons/info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 1.5em;
+}
+.icon.icon1{
+  background-image: url("../assets/icons/info.png");
+}
+.icon.icon2{
+  background-image: url("../assets/icons/attractions.png");
+}
+.icon.icon3{
+  background-image: url("../assets/icons/rooms.png");
+}
+.icon.icon4{
+  background-image: url("../assets/icons/dining.png");
+}
+.icon.icon5{
+  background-image: url("../assets/icons/events.png");
+}
+
+.zoon-info{
+  display: inline-block;
+  position: relative;
+}
+.zoon-info *{
+  width: 100%;
+  margin: 0;
+}
+.zoon-info:after{
+  content: "+";
+  color: #FFF;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.6);
+
+  display: none;
+  cursor: pointer;
+}
+.zoon-info:hover:after{
+  display: block;
+}
+
+.listado-bonito li{
+  margin: 4px 0;
+  background-color: #e8e8e8;
+  padding: 0.2em 0.5em ;
+}
+.listado-bonito li:nth-child(even){
+  background-color: #fff;
+}
+
+main {
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 10px auto 0;
+}
+main:after{
+  content: "";
+  height: 30px;
+  display: block;
+  padding-bottom: 20px;
+  clear: both;
+}
+
+.col-iz{
+  float: left;
+  width: 60%;
+}
+.col-de{
+  float: right;
+  width: 36%;
+}
+
+.gallery{
+  font-size: 0;
+}
+.gallery .zoon-info{
+  width: calc(20% - (16%/5));
+  margin: 2% 4%;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+.gallery .zoon-info:last-child{
+  margin-right: 0;
+}
+
+img {
+  margin: 20px;
+}
+img.flotante{
+  width: 40%;
+  float: right;
+  margin: 0.4em 0.5em 0;
+}
+img.flotante.left{
+  float: left;
+}
+section.content img{
+  max-width: 100%;
+  margin: 20px auto;
+}
+.img_container{
+  text-align: center;
+}
+
+.checklist li{
+  border: 1px solid #666;
+  padding: 0.25em 0.5em;
+  margin: 0.4em 0.8em;
+  font-size: 0.7em;
+  display: inline-block;
+}
+#services.checklist ul > li{
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+
+
+
+footer {
+  background: #333333;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+}
+footer li {
+  display: inline-block;
+  padding: 0 10px;
+}
+footer li a img {
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+
+@media (max-width: 600px) {
+  body{
+    font-size: 1.3em;
+  }
+
+  a{
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  header {
+    height: auto;
+  }
+  header nav {
+    position: initial;
+  }
+  header nav ul{
+    margin: 0;
+  }
+  header nav ul > li {
+    display: block;
+  }
+}
+

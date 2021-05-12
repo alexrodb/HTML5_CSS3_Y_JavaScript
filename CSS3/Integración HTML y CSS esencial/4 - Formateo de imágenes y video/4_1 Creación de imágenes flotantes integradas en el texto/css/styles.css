@@ -1,0 +1,202 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+body, ul, li {
+   margin: 0;
+   padding: 0;
+   font-weight: 200;
+   font-size: 1em;
+   font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+h1{
+  font-size: 1.75em;
+}
+h2{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 1.25em;
+}
+a{
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.big{
+  font-size: 1.4em;
+}
+.resaltado{
+  background-color: aquamarine;
+}
+.small{
+  font-size: 0.9em;
+}
+
+.disable{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button{
+  border: 1px solid #063642;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: normal;
+  color: #ffffff;
+  padding: 0.2em 0.5em;
+  font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  margin: 10px 10px;
+  user-select: none;
+  cursor: pointer;
+
+  background: -webkit-gradient(linear, left top, left bottom, from(#0a5c71), to(#063642));
+  background: -webkit-linear-gradient(top, #0a5c71 0%, #063642 100%);
+  background: -o-linear-gradient(top, #0a5c71 0%, #063642 100%);
+  background: linear-gradient(to bottom, #0a5c71 0%, #063642 100%);
+
+  background-color: #0a5c71;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background 1s;
+}
+.button:hover{
+  background-position: 0 100px;
+  transition: background 1s;
+}
+
+#main-wrapper{
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  height: 40px;
+  background-image: linear-gradient(to bottom, #0a5c71, #063642);
+}
+header nav {
+  position: absolute;
+  bottom: 2px;
+}
+header nav ul > li {
+  display: inline-block;
+  margin: 0 15px;
+  vertical-align: baseline;
+}
+header nav li a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-image: url("../assets/icons/info.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 1.5em;
+}
+header nav li.icon1 a{
+  background-image: url("../assets/icons/info.png");
+}
+header nav li.icon2 a{
+  background-image: url("../assets/icons/attractions.png");
+}
+header nav li.icon3 a{
+  background-image: url("../assets/icons/rooms.png");
+}
+header nav li.icon4 a{
+  background-image: url("../assets/icons/dining.png");
+}
+header nav li.icon5 a{
+  background-image: url("../assets/icons/events.png");
+}
+header nav li a:hover {
+  color:aquamarine;
+  transition: color 1s;
+}
+
+main {
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 10px auto 0;
+}
+main:after{
+  content: "";
+  height: 30px;
+  display: block;
+  padding-bottom: 20px;
+  clear: both;
+}
+
+.col-iz{
+  float: left;
+  width: 60%;
+}
+.col-de{
+  float: right;
+  width: 36%;
+}
+
+.gallery{
+  font-size: 0;
+}
+.gallery img{
+  width: 16%;
+  margin: 2%;
+  box-sizing: border-box;
+}
+
+img {
+  margin: 20px;
+}
+img.flotante{
+  width: 40%;
+  float: right;
+  margin: 0.4em 0.5em 0;
+}
+img.flotante.left{
+  float: left;
+}
+
+.checklist li{
+  border: 1px solid #666;
+  padding: 0.25em 0.5em;
+  margin: 0.4em 0.8em;
+  display: inline-block;
+  font-size: 0.7em;
+}
+#services.checklist ul > li{
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+
+footer {
+  background: #333333;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+}
+footer li {
+  display: inline-block;
+  padding: 0 10px;
+}
+footer li a img {
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+
+@media (max-width: 600px) {
+  body{
+    font-size: 1.3em;
+  }
+
+  a{
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
