@@ -1,0 +1,71 @@
+
+
+*{
+margin:0px;
+padding:0px;
+}
+
+
+
+/* ------- Page Structure ------- */
+html > body {
+font-size: 100%;
+}
+body{
+	font: 16px Georgia, "Times New Roman", Times, serif;
+	background-image: url(imag/lineabase.png);
+}
+
+
+#main_container{
+width:35em;
+height:auto;
+margin:32px auto;
+}
+
+
+
+
+/* ------- Text Hierarchy (tags) ------- */
+
+
+
+p {
+	font-size: 1em;
+	line-height: 1.5em; /* 1.5x16px=24px*/	
+}
+h1, h2, h3, p.intro { 
+text-rendering: optimizeLegibility;
+}
+
+h1{
+	font-size: 3em; /* 1.5x16px=48px*/	
+	line-height: 1em;
+	margin-bottom: 1.5em;
+}
+
+h2{
+	font-size: 2.225em; /* 2.225x16px=36px*/	
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+h3{
+font-size: 1.5em; /* 1.375x16px=22px*/
+line-height: 1.1em;
+margin: 0.5em 0 1.1em 0;
+}
+
+.nota{
+	
+	font-size: 0.875em;
+	line-height: 1.5em;
+	width: 100%;
+	color: #C20505;
+	border-top: 1px dotted #530D0D;
+	margin-top: 3em;
+	padding-top: 0.5em;
+	text-indent: -0.7em;
+	
+}
+
+/* ------- Text Hierarchy (tags) ------- */

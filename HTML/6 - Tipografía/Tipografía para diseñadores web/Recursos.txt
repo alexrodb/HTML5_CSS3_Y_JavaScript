@@ -1,0 +1,40 @@
+Recursos:
+Reset de estilos para la página:
+
+http://meyerweb.com/eric/tools/css/reset/reset.css
+
+
+Web:
+
+http://es.letrag.com/
+Clasificación, glosario, artículos, blogs, historia, enlaces, caracteres unicode, identificar estilos de letra, tipografías más comunes, etcétera.
+
+http://www.typophile.com/
+
+Algunas empresas de tipografía:
+
+http://www.fontshop.com/
+http://www.fonts.com/
+http://www.webink.com/
+https://typekit.com/
+http://www.fontslive.com/
+
+web fonts:
+
+http://www.google.com/webfonts
+http://www.fonts.com/web-fonts
+
+
+Partición de palabras:
+http://hyphenator.googlecode.com/svn/tags/Version%202.2.0/WorkingExample.html
+
+
+personalidad:
+
+http://www.pentagram.com/what-type-are-you/
+
+
+Algunas referencias de inspiración:
+
+http://www.designweekportland.com/
+http://jjr2012.srf.ch/homepage

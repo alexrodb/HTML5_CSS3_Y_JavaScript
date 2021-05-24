@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'UbuntuLight';
+    src: url('fonts/Ubuntu-L-webfont.eot');
+    src: url('fonts/Ubuntu-L-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-L-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-L-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-L-webfont.svg#UbuntuLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuBold';
+    src: url('fonts/Ubuntu-B-webfont.eot');
+    src: url('fonts/Ubuntu-B-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-B-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-B-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-B-webfont.svg#UbuntuBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'CosturaDemiBold';
+    src: url('fonts/costura_demibold-webfont.eot');
+    src: url('fonts/costura_demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/costura_demibold-webfont.woff') format('woff'),
+         url('fonts/costura_demibold-webfont.ttf') format('truetype'),
+         url('fonts/costura_demibold-webfont.svg#CosturaDemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+	width: 600px;
+	margin:auto;
+	font-family:'UbuntuLight',Verdana, Geneva, sans-serif;
+	background-color: #fbfbfb;
+}
+
+img {max-width:100%;
+}
+
+ul{list-style:none;
+}
+
+h1 {
+	font-family:  abril-fatface, verdana, sans-serif;
+	text-align:center;
+	font-size:6em;
+}
+
+h2 {
+	text-align:center;
+	border-bottom: 1px solid #666;
+	border-top: 1px solid #666;
+	padding: 0.3em;
+}
+h3 {
+	text-align:center;
+	border-bottom: 1px dashed #333;
+	border-top: 1px dashed #333;
+	padding: 0.2em;
+}
+h4 {
+	text-align:center;
+}
+
+
+.capital {
+	display:block;
+	text-align:center;
+	font-size: 6.3em;
+	marging-right:20px;
+	marging-top:3px;
+	float:left;
+	font-family:'CosturaDemiBold';
+}
+
+.nombre{
+		display:block;
+	text-align:center;
+	font-size: 1.5em;
+	color:#66F;
+	margin-bottom: .5em;
+	
+}
+.descripcion{
+	display:block;
+	text-align:center;
+	color:#666;
+	font-size:0.8em;
+	margin-bottom:.5em;
+
+}
+.precio{
+		display:block;
+	text-align:center;
+	font-size: 1.2em;
+	color: #900;
+	margin-bottom: .9em;
+	
+}

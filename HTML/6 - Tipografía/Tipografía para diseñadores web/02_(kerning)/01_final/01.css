@@ -1,0 +1,72 @@
+
+*{
+margin:0px;
+padding:0px;
+}
+
+
+/* ------- Page Structure ------- */
+html > body {
+font-size: 100%;
+}
+body{
+
+    font-size: 16px;
+	text-rendering: optimizeLegibility;
+    background: #fbedb7;
+}
+
+
+#main_container{
+width:35em;
+height:auto;
+margin:32px auto;
+padding: 0.5em 2em 3em 2em;
+ 	background-color: #fff;
+}
+
+
+
+/* ------- Text Hierarchy (tags) ----*/
+
+h1 {
+font-size: 8em;
+font-family: yesteryear, verdana;
+    font-style:normal;
+    font-weight: 300;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+     -o-transform: rotate(-15deg);
+color: red;
+    margin-top:.5em;
+    margin-bottom:.3em;
+    text-align:center;
+}
+
+h2{
+    font-family: podkova, georgia, sans-serif;
+    text-align:center;
+    color:#a4001b;
+    margin-bottom:2em;
+    
+}
+p {
+	width:35em;
+	font-size: 1em;
+	line-height: 1.5em; /* 1.5x16px=24px*/	
+    font-family: adamina, georgia, serif;
+    word-spacing:0.6em;
+    color: #000;
+
+}
+
+p:not(:first-of-type) {
+text-indent: 1em;
+}
+
+
+
+.kern {
+letter-spacing: -.1em;
+}
+

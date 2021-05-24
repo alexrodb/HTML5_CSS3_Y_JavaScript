@@ -1,0 +1,95 @@
+
+*{
+margin:0px;
+padding:0px;
+}
+
+
+/* ------- Page Structure ------- */
+html > body {
+font-size: 100%;
+}
+body{
+	font: 100px Georgia, "Times New Roman", Times, serif;
+	text-rendering: optimizeLegibility;
+	background: url(imag/lineabase_01.png) #f4f6d0;
+}
+
+
+#main_container{
+width:35em;
+height:auto;
+margin:32px auto;
+padding-top: 3em;
+}
+
+
+/* ------- Text Hierarchy (tags) ------- */
+
+
+h1, h2, h3, p.intro { 
+text-rendering: optimizeLegibility;
+}
+
+h1{
+	font-size: 3em; /* 1.5x16px=48px*/	
+	line-height: 1em;
+	margin-bottom: 1.5em;
+}
+
+h2{
+	font-size: 2.225em; /* 2.225x16px=36px*/	
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
+
+h3{
+font-size: 1.5em; /* 1.375x16px=22px*/
+line-height: 1.1em;
+margin: 0.5em 0 1.1em 0;
+}
+
+p {
+	width:35em;
+	font-size: 1em;
+	line-height: 1.5em; /* 1.5x16px=24px*/
+	text-align: justify;
+}
+
+/* ------- sangrías ------- */
+
+
+/*---- sangría francesa -----*/
+/*
+
+p{text-indent:-1em;}
+
+*/
+
+
+/*---- salto de línea normal -----*/
+/*
+
+p {margin-bottom: 1.5em;}
+
+*/
+
+
+  /*---- sangrado normal -----*/
+p:not(:first-of-type) {text-indent: 2em;}
+
+  /*---- capital -----*/
+
+p:first-child:first-letter {
+		font-size: 6em; float: left; margin: 0 .15em 0 0;  line-height: 0.555em;
+		text-shadow: 2px 2px 0px #f4f6d0, 4px 4px 0px #707070;
+	}
+
+  /*---- Primera línea versalitas -----*/
+p:first-of-type::first-line {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+

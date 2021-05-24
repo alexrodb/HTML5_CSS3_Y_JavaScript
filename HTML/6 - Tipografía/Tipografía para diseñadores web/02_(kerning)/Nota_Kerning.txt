@@ -1,0 +1,12 @@
+Nota:
+
+
+Estos dos scripts son los que hacen que se muestre en la página la tipografía "yesteryear" de Adobe Edge Fonts. 
+
+<script src="http://use.edgefonts.net/yesteryear:n4:all.js"></script>
+<script src="http://use.edgefonts.net/podkova:n4,n7:all;yesteryear:n4:all.js"></script>
+
+
+Si no se muestra la tipografía, posiblemente la conexión a internet en tu ordenador no funcionará, y verás una tipografía de sustitución.
+
+
