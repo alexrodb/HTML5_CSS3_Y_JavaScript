@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href="styles.css" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="main_wrapper">
+        <header>
+            
+        </header>
+        <main class="container__main">
+            <!-- Left sidebar -->
+            <aside class="container__left">...</aside>
+            
+            <!-- Main content -->
+            <article class="container__middle">
+                <h1>Una Guía Comprensible Sobre la Alineación de Flexbox</h1>
+                <p>La alineación es probablemente el aspecto más confuso de flexbox. El módulo flexbox layout tiene un puñado de útiles propiedades de alineación que se comportan de distinta forma en diferentes circunstancias, y cuando las usamos es probable que no entiendas qué es lo que está sucediendo o por qué. Sin embargo, si sabes a qué debes prestar atención, la alineación es menos complicada de lo que pueda parecer en un principio. Este tutorial te ayudará a entender perfectamente la alineación con flexbox.</p>
+                <h2>Una Historia de Dos Ejes</h2>
+                <p>Cuando usamos flexbox trabajamos dentro de dos ejes: el eje principal y el eje transversal. Como sus nombres sugieren, estos ejes tienen una relación jerárquica, el eje principal es superior a los transversales.</p>
+                <img src="axes.png" alt="El eje transversal siempre es perpendicular al eje principal."><span>El eje transversal siempre es perpendicular al eje principal.</span>
+                <p>Esta relación jerárquica es la diferencia principal entre flexbox y CSS Grid Layout. Por diseño, CSS grid tiene dos ejes no jerárquicos: el eje correspondiente a las filas y el correspondiente a las columnas. Esto es así porque los creadores de los estándares web pretendían que CSS grid fuese usado como un modelo de maquetación de dos dimensiones. La mejor parte sobre flexbox es que puedes definir la dirección de esa dimensión estableciendo la posición de los ejes principales, por tanto puedes crear maquetaciones basadas tanto en filas como en columnas.</p>
+                <p>Para evitar confundirte con las propiedades, recuerda en todo momento que cuando usas flexbox, estás trabajando con un modelo de una dimensión. Incluso aunque el diseño de tu maquetación parezca que tienen dos dimensiones (es decir, filas y columnas), los elementos flex solo pueden fluir en una dirección, a lo largo del eje principal. Puedes justificar los elementos flex en esta dirección y distribuir el espaciado entre los elementos individuales a lo largo del eje transversal. </p>
+                <h2>Definiendo el Eje Principal</h2>
+                <p>La dirección del eje principal está determinada por la propiedad flex-direction, que cuenta con cuatro posibles valores</p>
+                <hr>
+                <h2>1. De Izquierda a Derecha: row</h2>
+                <p>Cuando flex-direction está establecido a row, el eje principal es el horizontal, desde la izquierda a la derecha. Esta es por tanto la dirección a lo largo de la cual son desplegados los elementos flex. El eje transversal se prolonga perpendicularmente, desde la parte superior a la inferior, y cuando los elementos se apilan, lo hacen en esta dirección.</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        }</code>
+                </pre>
+                <div class="container_row">          <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                <p>Para invertir la dirección del eje vertical, se usa wrap-reverse en la propiedad flex-wrap. </p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje vertical --*/
+                        flex-direction: row;
+                        }</code>
+                </pre>
+                <div class="container_row_wrap-reverse"> <!-- Flex container -->
+                    <div class="item item-1">1</div>     <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                <hr>
+                <h2>2. De Derecha a Izquierda: row-reverse</h2>
+                <p>Cuando a la dirección flex le aplicamos el valor row-reverse, la posición del axis permanece igual, lo que significa que el eje principal todavía será recorrido horizontalmente y el eje perpendicular a este, será recorrido verticalmente. Sin embargo, la dirección horizontal será invertida, recorriéndose el eje principal desde la derecha hacia la izquierda</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row-reverse;
+                        }</code>
+                </pre>
+                <div class="container_row-reverse">  <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje vertical --*/
+                        flex-direction: row-reverse;
+                        }</code>
+                </pre>
+                <div class="container_row-reverse_wrap-reverse">  <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                <hr>
+                <h2>3. De Arriba hacia Abajo: column</h2>
+                <p>Cuando se establece flex-direction a column, los ejes principal y vertical cambian sus posiciones. El eje principal funcionará como eje vertical (de arriba hacia abajo) y el eje vertical lo hará ahora horizontalmente (de izquierda a derecha).</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        max-height: 26rem;
+                        }</code>
+                </pre>
+                <div class="container_column">  <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div> 
+                </div>
+                <p>De nuevo, para cambiar la dirección del eje perpendicular, necesitarás usar wrap-reverse en la propiedad flex-wrap.</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje horizontal --*/
+                        flex-direction: column;
+                        max-height: 26rem;
+                        }</code>
+                </pre>
+                <div class="container_column_wrap-reverse">  <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div> 
+                </div>
+                <hr>
+                <h2>4. De Abajo Hacia Arriba: column-reverse</h2>
+                <p>Cuando flex-direction es establecido a column-reverse, el eje principal sigue siendo vertical y el eje perpendicular sigue siendo horizontal, tal y como vimos en el anterior ejemplo. Sin embargo, la dirección de la columna se invierte de tal manera que el eje principal sigue es recorrido desde abajo hacia arriba.</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column-reverse;
+                        max-height: 26rem;
+                        }</code>
+                </pre>
+                <div class="container_column-reverse">  <!-- Flex container -->
+                    <div class="item item-1">1</div> <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                <p>De nuevo, para cambiar la dirección del eje perpendicular, necesitarás usar wrap-reverse en la propiedad flex-wrap.</p>
+                <pre><code class="language-css">
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje horizontal --*/
+                        flex-direction: column-reverse;
+                        max-height: 26rem;
+                        }</code>
+                </pre>
+                <div class="container_column-reverse_wrap-reverse"> <!-- Flex container -->
+                    <div class="item item-1">1</div>                <!-- Flex items -->
+                    <div class="item item-2">2</div>
+                    <div class="item item-3">3</div>
+                    <div class="item item-4">4</div>
+                    <div class="item item-5">5</div>
+                    <div class="item item-6">6</div>
+                    <div class="item item-7">7</div>
+                    <div class="item item-8">8</div>
+                    <div class="item item-9">9</div>
+                    <div class="item item-10">10</div>
+                    <div class="item item-11">11</div>
+                    <div class="item item-12">12</div>
+                </div>
+                
+                <h3>Abreviación Flex-flow</h3>
+                <p>La propiedad flex-flow es una abreviación para flex-direction y flex-wrap. Se puede usarla, por ejemplo, de la siguiente forma:</p>
+                <pre>
+                    <code class="language-css">
+                flex-flow: column wrap;</code>
+                </pre>
+                <p>en lugar de:</p>
+                <pre><code class="language-css">
+                flex-direction: column; 
+                flex-wrap: wrap;</code>
+                </pre>
+            </article>
+            <!-- Right sidebar -->
+            <nav class="container__right">...</nav>
+        </main>
+        <footer>
+        <blockquote>
+        <h4>Referencias</h4>
+            1. <a target="_blank" href="https://webdesign.tutsplus.com/es/tutorials/a-comprehensive-guide-to-flexbox-alignment--cms-30183">Una Guía Comprensible Sobre la Alineación de Flexbox</a>
+            2. <a target="_blank" href="https://csslayout.io/patterns">https://csslayout.io/patterns</a>
+            3. <a target="_blank" href="https://www.freecodecamp.org/news/learn-flexbox-build-5-layouts/">https://www.freecodecamp.org/news/learn-flexbox-build-5-layouts </a>
+            4. <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"> https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</a>
+            5. <a target="_blank" href="https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/">https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/ </a>
+            6. <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+        </blockquote>
+        </footer>
+    </div>
+
+</body>
+</html>
