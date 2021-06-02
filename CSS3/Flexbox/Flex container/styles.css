@@ -24,15 +24,15 @@ body {
 }
 
 .container__left {
-    width: 25%;
+    width: 45%;
 }
 
 .container__middle {
-    
+    flex-grow: 1;
 }
 
 .container__right {
-    width: 25%;
+    width: 45%;
 }
 
 /**/
@@ -70,6 +70,13 @@ p {
     margin: 1em;
 }
 
+ul li {
+    list-style: none;
+    font-size: 1.5em;
+	line-height: 1.7em; /* 1.5x16px=24px*/
+	text-align: justify;
+    margin: 1em;
+}
 pre {
     font-family: monospace;
     text-align: left;
@@ -111,29 +118,49 @@ pre {
     flex-wrap: wrap;
     flex-direction: column;
     border: 2px dotted;
-    max-height: 26rem; /* La propiedad max-height se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la altura pueda llegar a ser más grande que la de max-height*/
 }
 .container_column_wrap-reverse{
     display: flex;
     flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje horizontal --*/
     flex-direction: column;
     border: 2px dotted;
-    max-height: 26rem; /* La propiedad max-height se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la altura pueda llegar a ser más grande que la de max-height*/
 }
 .container_column-reverse{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
     border: 2px dotted;
-    max-height: 26rem; /* La propiedad max-height se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la altura pueda llegar a ser más grande que la de max-height */
 }
 .container_column-reverse_wrap-reverse{
     display: flex;
     flex-wrap: wrap-reverse; /*-- Invierte la dirección del eje horizontal --*/
     flex-direction: column-reverse;
     border: 2px dotted;
+}
+
+.heightone {
     max-height: 26rem; /* La propiedad max-height se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la altura pueda llegar a ser más grande que la de max-height */
 }
+.heighttwo {
+    height: 1000px;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.center {
+    justify-content: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+
 
 .item {
     width: 125px; 

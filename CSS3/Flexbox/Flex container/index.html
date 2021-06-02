@@ -130,7 +130,7 @@
                         max-height: 26rem;
                         }</code>
                 </pre>
-                <div class="container_column">  <!-- Flex container -->
+                <div class="heightone container_column">  <!-- Flex container -->
                     <div class="item item-1">1</div> <!-- Flex items -->
                     <div class="item item-2">2</div>
                     <div class="item item-3">3</div>
@@ -153,7 +153,7 @@
                         max-height: 26rem;
                         }</code>
                 </pre>
-                <div class="container_column_wrap-reverse">  <!-- Flex container -->
+                <div class="heightone container_column_wrap-reverse">  <!-- Flex container -->
                     <div class="item item-1">1</div> <!-- Flex items -->
                     <div class="item item-2">2</div>
                     <div class="item item-3">3</div>
@@ -178,7 +178,7 @@
                         max-height: 26rem;
                         }</code>
                 </pre>
-                <div class="container_column-reverse">  <!-- Flex container -->
+                <div class="heightone container_column-reverse">  <!-- Flex container -->
                     <div class="item item-1">1</div> <!-- Flex items -->
                     <div class="item item-2">2</div>
                     <div class="item item-3">3</div>
@@ -201,7 +201,7 @@
                         max-height: 26rem;
                         }</code>
                 </pre>
-                <div class="container_column-reverse_wrap-reverse"> <!-- Flex container -->
+                <div class="heightone container_column-reverse_wrap-reverse"> <!-- Flex container -->
                     <div class="item item-1">1</div>                <!-- Flex items -->
                     <div class="item item-2">2</div>
                     <div class="item item-3">3</div>
@@ -227,7 +227,362 @@
                 flex-direction: column; 
                 flex-wrap: wrap;</code>
                 </pre>
+
+                <h3>Propiedades de Alineación de Flexbox</h3>
+                <p>La alineación flexbox puede darse a lo largo de ambos ejes, el principal y el perpendicular.<br>
+                Una de las propiedades (justify-content) pertenece al eje principal, mientras que las tres restantes (align-items, align-self, align-content) pertenece al eje perpendicular.<br>    
+                Como puedes imaginar, el comportamiento de las propiedades de alineación depende de la propiedad flex-direction. Por ejemplo, justify-content alinéa los elementos horizontalmente si flex-direction tiene el valor row o row-reverse, y verticalmente si flex-direction tiene el valor column o column-reverse. Esta es la belleza real de un contenedor flexible.</p>
+
+                <h3>Alineación A lo Largo del Eje Principal</h3>
+                <p> La propiedad justify-content alinéa los elementos flex dentro del contenedor flex a lo largo del eje principal. <br>
+                    Esta propiedad distribuye el espacio extra sobrante en el lateral izquierdo después de que el navegador haya calculado el espacio necesario para ubicar todos los ítems en el contenedor flex. <br>
+                    La propiedad justify content puede tomar cinco valores:</p>
+                    <ul>
+                        <li>1. flex-start – los elementos flex se justifican a partir del punto de inicio del eje principal (este es el comportamiento predeterminado).</li>
+                        <li>2. flex-end – los elementos flex se justifican desde el final del eje principal.</li>
+                        <li>3. center – los elementos flex se justifican partiendo desde el centro del eje principal.</li>
+                        <li>4. space-between – los elementos flex se distribuyen uniformemente a lo largo del eje principal, desde flex-start hasta flex-end.</li>
+                        <li>5. space-around – los elementos flex se distribuyen uniformemente a lo largo del eje principal, pero se añaden espacios extra iguales a la mitad del resto en ambos extremos.</li>
+                    </ul>
+                    <p>
+                    Para usar la adecuadamente justify-content, tienes que prestar atención a las direcciones de tus ejes. Por ejemplo, la regla justify-content: flex-start, siempre distribuye los elementos flex desde el punto inicial del eje principal. Este punto se corresponderá con el extremo izquierdo cuando flex-direction sea row, y con el derecho cuando sea row-reverse, el punto superior cuando sea column, y el más bajo cuando sea column-reverse.
+                    
+                    <br>A continuación se muestra cómo los distintos valores de la propiedad justify-content alinéa los elementos flex cuando flex-direction es row.</p>
+
+                    <h3><code>justify-content: flex-start</code></h3>
+                    <div class="container_row flex-start">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: flex-end</code></h3>
+                    <div class="container_row flex-end">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: center</code></h3>
+                    <div class="container_row center">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-between</code></h3>
+                    <div class="container_row space-between">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-around</code></h3>
+                    <div class="container_row space-around">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>      
+
+                    <p>A continuación se muestra cómo los distintos valores de la propiedad justify-content alinéa los elementos flex cuando flex-direction es row-reverse.</p>
+
+                    <h3><code>justify-content: flex-start</code></h3>
+                    <div class="container_row-reverse flex-start">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: flex-end</code></h3>
+                    <div class="container_row-reverse flex-end">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: center</code></h3>
+                    <div class="container_row-reverse center">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-between</code></h3>
+                    <div class="container_row-reverse space-between">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-around</code></h3>
+                    <div class="container_row-reverse space-around">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div> 
+
+                    <p>A continuación se muestra cómo los distintos valores de la propiedad justify-content alinéa los elementos flex cuando flex-direction es column.</p>
+                    
+                    <h3><code>justify-content: flex-start</code></h3>
+                    <div class="heighttwo container_column flex-start">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                        
+                    </div>
+
+                    <h3><code>justify-content: flex-end</code></h3>
+                    <div class="heighttwo container_column flex-end">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: center</code></h3>
+                    <div class="heighttwo container_column center">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-between</code></h3>
+                    <div class="heighttwo container_column space-between">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                        
+                    </div>
+
+                    <h3><code>justify-content: space-around</code></h3>
+                    <div class="heighttwo container_column space-around">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+                    
+                    <p>A continuación se muestra cómo los distintos valores de la propiedad justify-content alinéa los elementos flex cuando flex-direction es column-reverse.</p>
+
+                    <h3><code>justify-content: flex-start</code></h3>
+                    <div class="heighttwo container_column-reverse flex-start">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                        
+                    </div>
+
+                    <h3><code>justify-content: flex-end</code></h3>
+                    <div class="heighttwo container_column-reverse flex-end">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: center</code></h3>
+                    <div class="heighttwo container_column-reverse center">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+
+                    <h3><code>justify-content: space-between</code></h3>
+                    <div class="heighttwo container_column-reverse space-between">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                        
+                    </div>
+
+                    <h3><code>justify-content: space-around</code></h3>
+                    <div class="heighttwo container_column-reverse space-around">
+                        <div class="item item-1">1</div>
+                        <div class="item item-2">2</div>
+                        <div class="item item-3">3</div>
+                        <div class="item item-4">4</div>
+                        <div class="item item-5">5</div>
+                        <div class="item item-6">6</div>
+                        <div class="item item-7">7</div>
+                        <div class="item item-8">8</div>
+                        <div class="item item-9">9</div>
+                        <div class="item item-10">10</div>
+                        <div class="item item-11">11</div>
+                        <div class="item item-12">12</div>
+                    </div>
+                
             </article>
+
             <!-- Right sidebar -->
             <nav class="container__right">...</nav>
         </main>
