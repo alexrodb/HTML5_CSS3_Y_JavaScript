@@ -56,6 +56,12 @@ line-height: 1.1em;
 margin: 0.5em 0 1.1em 0;
 }
 
+h4{
+    font-size: 1.3em; /* 1.375x16px=22px*/
+    line-height: 1.1em;
+    margin: 0.5em 0 1.1em 0;
+    }
+
 hr {
     border: 0; 
     height: 5px; 
@@ -144,6 +150,9 @@ pre {
 .heighttwo {
     height: 1000px;
 }
+.heightthree {
+    height: 15rem; /* La propiedad max-height se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la altura pueda llegar a ser más grande que la de max-height */
+}
 
 .flex-start {
     justify-content: flex-start;
@@ -159,6 +168,22 @@ pre {
 }
 .space-around {
     justify-content: space-around;
+}
+
+.flex-start {
+    align-items: flex-start;
+}
+.flex-end {
+    align-items: flex-end;
+}
+.center {
+    align-items: center;
+}
+.baseline {
+    align-items: baseline;
+}
+.stretch {
+    align-self: stretch;
 }
 
 
@@ -178,4 +203,52 @@ pre {
     font-size: 1.8rem;
     font-weight: bold;
 
+}
+.item-1{
+    width: 50px; 
+    height: 80px; 
+}
+.item-3{
+    width: 55px; 
+    height: 85px; 
+}
+.item-5{
+    width: 60px; 
+    height: 90px; 
+}
+.item-7{
+    width: 65px; 
+    height: 95px; 
+}
+.item-9{
+    width: 70px; 
+    height: 100px; 
+}
+.item-10{
+    width: 75px; 
+    height: 105px; 
+}
+.item-12{
+    width: 80px; 
+    height: 110px; 
+}
+.item-11{
+    width: 85px; 
+    height: 115px; 
+}
+.item-8{
+    width: 90px; 
+    height: 125px; 
+}
+.item-6{
+    width: 95px; 
+    height: 130px; 
+}
+.item-4{
+    width: 100px; 
+    height: 135px; 
+}
+.item-2{
+    width: 105px; 
+    height: 140px; 
 }
