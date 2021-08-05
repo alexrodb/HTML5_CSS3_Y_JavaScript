@@ -1,0 +1,16 @@
+Colores vivos
+&H0000FE& Rojo
+&H0059FE& Rojo Naranja
+&H0186FF& Naranja
+&H00BEFF& Ámbar
+&H00FFFF& Amarillo
+&H01FFA5& Lima o Verde limón
+&H01FF00& Verde
+&H87FF00& Verde Cian
+&HFFFF00& Cian
+&HFF9900& Cerúleo
+&HFE0000& Azul
+&HFE01A6& Violeta
+&HFE00FF& Magenta 
+&H8C00FF& Fucsia
+

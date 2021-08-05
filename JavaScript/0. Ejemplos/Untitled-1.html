@@ -1,0 +1,37 @@
+                    <label>Estado de la entrada: </label><br>
+                            <div class="form-check form-switch">
+                                
+                                <input id="statusPost" onclick="changeValueStatusPost()" class="form-check-input" type="checkbox" name="status"  
+                                @if ($post->status === 'PUBLISHED')
+                                checked
+                                @else
+                                    
+                                @endif>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Borrador o Publicado</label>
+
+
+
+                            
+                    <script type="text/javascript">
+                        // Determina y busca el valor del estado de cada entrada
+                        const statusPost = document.getElementById("statusPost");
+
+                        if (document.getElementById('statusPost').checked)
+                        {
+                        statusPost.value = "PUBLISHED";
+                        }else{
+                        statusPost.value = "DRAFT"; 
+                        }
+
+                        function changeValueStatusPost(){
+                            if (statusPost.value == 'PUBLISHED') 
+                            {
+                            statusPost.value = 'DRAFT';
+                            statusPost.removeAttribute('checked');
+                            }else {
+                            statusPost.value = 'PUBLISHED';
+                            statusPost.setAttribute("checked", "");
+                            }
+                        }
+
+                    </script>
